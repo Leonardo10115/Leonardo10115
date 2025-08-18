@@ -33,3 +33,7 @@ console.log(minhaCalculadora.somar())
 console.log(minhaCalculadora.subtrair())
 console.log(minhaCalculadora.multiplicar())
 console.log(minhaCalculadora.dividir())
+
+
+
+
