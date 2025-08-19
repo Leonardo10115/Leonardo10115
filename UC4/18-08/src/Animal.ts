@@ -8,7 +8,7 @@ export class Animal {
     }
 
     eat():void{
-        console.log(`The animal is eating`)
+        console.log(`${this.name} is eating`)
     }
 
 }

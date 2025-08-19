@@ -7,7 +7,7 @@ class Animal {
         this.weight = weight;
     }
     eat() {
-        console.log(`The animal is eating`);
+        console.log(`${this.name} is eating`);
     }
 }
 exports.Animal = Animal;

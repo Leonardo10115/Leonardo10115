@@ -7,10 +7,11 @@ import { Animal } from "./Animal"
 
     constructor(name:string, weight:number) {
         super(name, weight)
+        //super e usado para convocar o construtor do pai. Assim reutilizando ele na classe filha
     }
 
     bark():void{
         console.log(`${this.name} is barking.`)
     }
-
+    
 }

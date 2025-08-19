@@ -7,6 +7,7 @@ class Dog extends Animal_1.Animal {
     // Dog, como é filho da classse Animal, ja herda os atributos 'name' e 'weight'
     constructor(name, weight) {
         super(name, weight);
+        //super e usado para convocar o construtor do pai. Assim reutilizando ele na classe filha
     }
     bark() {
         console.log(`${this.name} is barking.`);
