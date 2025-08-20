@@ -33,5 +33,8 @@ let animais:Animal[] = [myCrocodile, myOwl, myDog]
 for(let i = 0; i < animais.length; i++){
     animais[i].eat()
 }
-   
+// const animais:Animal[] = [myDog, myOwl, myCrocodile]
+//for(const animal of animais){
+  //console.log(animal)
+//}
     

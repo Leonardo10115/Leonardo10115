@@ -23,3 +23,7 @@ console.log(myCrocodile.name);
 console.log(myCrocodile.weight);
 myCrocodile.swin();
 myCrocodile.eat();
+let animais = [myCrocodile, myOwl, myDog];
+for (let i = 0; i < animais.length; i++) {
+    animais[i].eat();
+}
