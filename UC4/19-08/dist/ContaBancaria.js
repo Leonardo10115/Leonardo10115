@@ -10,3 +10,6 @@ class ContaBancaria {
     }
 }
 exports.ContaBancaria = ContaBancaria;
+//Outro método de usar
+//  protected atualizarSaldo(novoSaldo:number):void{ 
+//   this.saldo += novoSaldo

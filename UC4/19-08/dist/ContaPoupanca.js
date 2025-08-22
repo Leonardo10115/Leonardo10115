@@ -11,3 +11,8 @@ class ContaPoupanca extends ContaBancaria_1.ContaBancaria {
     }
 }
 exports.ContaPoupanca = ContaPoupanca;
+//aplicarJuros():void{
+//  let juros = this.saldo * 0.02
+//this.atualizarSaldo(juros)
+//console.log(`Saldo com juros: RS ${}`)
+//}

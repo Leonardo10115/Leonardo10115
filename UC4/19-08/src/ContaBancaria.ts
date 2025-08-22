@@ -8,3 +8,6 @@ export class ContaBancaria {
         console.log(`Saldo ${this.saldo += novoSaldo}`)
     }
 }
+//Outro método de usar
+//  protected atualizarSaldo(novoSaldo:number):void{ 
+//   this.saldo += novoSaldo

@@ -10,3 +10,8 @@ export class ContaPoupanca extends ContaBancaria{
         this.atualizarSaldo(juros)
     }
 }
+//aplicarJuros():void{
+//  let juros = this.saldo * 0.02
+//this.atualizarSaldo(juros)
+//console.log(`Saldo com juros: RS ${}`)
+//}
