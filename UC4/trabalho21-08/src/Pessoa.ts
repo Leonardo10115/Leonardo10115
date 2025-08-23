@@ -1,8 +1,10 @@
+//Cria a classe Pessoa, tem que ser digitado igual foi criada
 export class Pessoa{
+    //
     nome:string
     idade:number
     peso:number
-
+     //Inicia os atributos criados da classe
     constructor(Nome:string, Idade:number, Peso:number){
         this.nome = Nome
         this.idade = Idade
