@@ -54,13 +54,14 @@ class SistemaHemocentro extends Pessoa_1.Pessoa {
     }
     buscarPorTipoSanguineo() {
         const Pergunta = readline.question("Digite o tipo sanguine desajado: ");
-        for (let i = 0; i < this.doadores.length; i++) {
-            if (Pergunta == this.doadores[i].getTipoSanguineo()) {
-                console.log(`------------------------
+        console.log(`------------------------
 RESULTADO DA BUSCA:
 ------------------------
 NOME             | IDADE | PESO | TIPO SANGUÍNEO | ÚLTIMA DOAÇÃO
------------------------------------------------------------------
+-----------------------------------------------------------------`);
+        for (let i = 0; i < this.doadores.length; i++) {
+            if (Pergunta == this.doadores[i].getTipoSanguineo()) {
+                console.log(`
 ${this.doadores[i].getNome()}     |  ${this.doadores[i].getPeso()}    |  ${this.doadores[i].getIdade()}   |      ${this.doadores[i].getTipoSanguineo()}         |   ${this.doadores[i].getDataUltimaDoacao()}   
 -----------------------------------------------------------------`);
             }
@@ -70,28 +71,34 @@ ${this.doadores[i].getNome()}     |  ${this.doadores[i].getPeso()}    |  ${this.
     }
     buscarPorDataUltimaDoacao() {
         const Pergunta = readline.question("Digite uma data: ");
+        console.log(`------------------------
+RESULTADO DA BUSCA:
+------------------------
+NOME             | IDADE | PESO | TIPO SANGUÍNEO | ÚLTIMA DOAÇÃO
+-----------------------------------------------------------------`);
         for (let i = 0; i < this.doadores.length; i++) {
             if (Pergunta === this.doadores[i].getDataUltimaDoacao()) {
-                console.log(`------------------------
-                RESULTADO DA BUSCA:
-                ------------------------
-                NOME             | IDADE | PESO | TIPO SANGUÍNEO | ÚLTIMA DOAÇÃO
-                -----------------------------------------------------------------
-                ${this.doadores[i].getNome()}     |  ${this.doadores[i].getPeso()}    |  ${this.doadores[i].getIdade()}   |      ${this.doadores[i].getTipoSanguineo()}         |   ${this.doadores[i].getDataUltimaDoacao()}   
-                -----------------------------------------------------------------`);
+                console.log(`
+${this.doadores[i].getNome()}     |  ${this.doadores[i].getPeso()}    |  ${this.doadores[i].getIdade()}   |      ${this.doadores[i].getTipoSanguineo()}         |   ${this.doadores[i].getDataUltimaDoacao()}   
+-----------------------------------------------------------------`);
             }
         }
     }
     listadeDoadores() {
+        console.log(`--------------------
+LISTAGEM DE DOADORES:
+--------------------
+NOME             | IDADE | PESO | TIPO SANGUÍNEO | ÚLTIMA DOAÇÃO
+-----------------------------------------------------------------`);
         for (let i = 0; i < this.doadores.length; i++) {
-            console.log(`--------------------
-        LISTAGEM DE DOADORES:
-        --------------------
-        NOME             | IDADE | PESO | TIPO SANGUÍNEO | ÚLTIMA DOAÇÃO
-        -----------------------------------------------------------------
-        ${this.doadores[i].getNome()}    |  ${this.doadores[i].getIdade()}   |  ${this.doadores[i].getPeso()}  |     ${this.doadores[i].getTipoSanguineo()}        |   ${this.doadores[i].getDataUltimaDoacao()} 
-        -----------------------------------------------------------------`);
+            console.log(`
+${this.doadores[i].getNome()}    |  ${this.doadores[i].getIdade()}   |  ${this.doadores[i].getPeso()}  |     ${this.doadores[i].getTipoSanguineo()}        |   ${this.doadores[i].getDataUltimaDoacao()} 
+-----------------------------------------------------------------`);
         }
+    }
+    primeiroDoador() {
+        const primeiroDoador = new Doador_1.Doador("Pedro", 25, 60, "A+", "20.01.2022");
+        this.doadores.push(primeiroDoador);
     }
 }
 exports.SistemaHemocentro = SistemaHemocentro;

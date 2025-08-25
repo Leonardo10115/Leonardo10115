@@ -36,6 +36,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const readline = __importStar(require("readline-sync"));
 const SistemaHemocentro_1 = require("./SistemaHemocentro");
 const doador = new SistemaHemocentro_1.SistemaHemocentro("", 1, 1);
+doador.primeiroDoador();
 let opcao = "";
 do {
     console.log(`
