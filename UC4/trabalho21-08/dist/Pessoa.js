@@ -9,9 +9,11 @@ class Pessoa {
         this.idade = Idade;
         this.peso = Peso;
     }
+    // Mostra todas as informções da "Pessoa"
     mostraInfo() {
         console.log(`nome: ${this.nome}, idade: ${this.idade}, peso: ${this.peso}`);
     }
+    // Get e Set de cada atributo da classe Mãe
     getNome() {
         return this.nome;
     }

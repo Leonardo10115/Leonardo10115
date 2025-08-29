@@ -2,14 +2,11 @@
 import { Doador } from "./Doador";
 import { Pessoa } from "./Pessoa";
 import * as readline from 'readline-sync';
-export class SistemaHemocentro extends Pessoa {
+export class SistemaHemocentro {
     // Atributo desta classe
-    private doadores: Doador[] = []
+    private doadores: Doador[] = [new Doador("Pedro", 25, 60, "A+", "20.01.2022")]
 
-    constructor(Nome: string, Idade: number, Peso: number, doadores: Doador[] = []) {
-        super(Nome, Idade, Peso)
-        this.doadores = doadores
-    }
+    
 // Função para cadastrar os doadores
     cadastrarDoador(): void {
         // Perguntas sobre o doador
@@ -39,9 +36,7 @@ NOME             | IDADE | PESO | TIPO SANGUÍNEO | ÚLTIMA DOAÇÃO
                 console.log(`
 ${this.doadores[i].getNome()}     |  ${this.doadores[i].getPeso()}    |  ${this.doadores[i].getIdade()}   |      ${this.doadores[i].getTipoSanguineo()}         |   ${this.doadores[i].getDataUltimaDoacao()}   
 -----------------------------------------------------------------`)
-            } else {
-                console.log("Tipo sanguineo não encontrado")
-            }
+            } 
         }
     }
 // Função para buscar o doador pela data da ultima doação
@@ -76,11 +71,4 @@ NOME             | IDADE | PESO | TIPO SANGUÍNEO | ÚLTIMA DOAÇÃO
 ${this.doadores[i].getNome()}    |  ${this.doadores[i].getIdade()}   |  ${this.doadores[i].getPeso()}  |     ${this.doadores[i].getTipoSanguineo()}        |   ${this.doadores[i].getDataUltimaDoacao()} 
 -----------------------------------------------------------------`)}
     }
-// Função para deixar um doador já cadastrado
-    primeiroDoador(){
-        const primeiroDoador:Doador = new Doador("Pedro", 25, 60, "A+", "20.01.2022")
-        this.doadores.push(primeiroDoador)
-    }
-
 }
-

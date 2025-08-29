@@ -30,3 +30,69 @@ console.log("a é igual a 10 OU b é maior que 25?" + (a == 10 || b > 25)) // Op
 console.log("a não é maior que 5?" + !(a > 5)) // Operador lógico "NÃO" ou "NOT" (!) 
 
 
+
+
+function retrocederMusica() {
+  if (musicaAtual > 0) {
+    musicaAtual--;
+    tocarMusicaAtual();
+  } else {
+    console.log("Não é possível retroceder.");
+  }
+}
+
+function tocarPorNome(nome) {
+  let index = playlist.indexOf(nome);
+  if (index !== -1) {
+    musicaAtual = index;
+    tocarMusicaAtual();
+  } else {
+    console.log("Música não encontrada: " + nome);
+  }
+}
+
+function tocarPorNumero(numero) {
+  if (numero >= 0 && numero < playlist.length) {
+    musicaAtual = numero;
+    tocarMusicaAtual();
+  } else {
+    console.log("Número inválido.");
+  }
+}
+
+function tocarMusicaAtual() {
+  if (musicaAtual >= 0 && musicaAtual < playlist.length) {
+    console.log("Tocando agora: " + playlist[musicaAtual]);
+  } else {
+    console.log("Nenhuma música selecionada.");
+  }
+}
+
+function tocarAleatoriaESair() {
+  if (playlist.length === 0) {
+    console.log("A playlist está vazia.");
+    return;
+  }
+  let aleatoria = Math.floor(Math.random() * playlist.length);
+  musicaAtual = aleatoria;
+  tocarMusicaAtual();
+  sairDoApp();
+}
+
+function sairDoApp() {
+  console.log("Saindo do aplicativo...");
+}
+
+// Exemplo de uso:
+adicionarMusica("Rock");
+adicionarMusica("Pop");
+adicionarMusica("Jazz");
+
+tocarPorNome("Pop");
+retrocederMusica();
+tocarPorNumero(2);
+removerMusica("Rock");
+tocarAleatoriaESair();
+  
+const ps = require("prompt-sync")
+const prompt = ps()

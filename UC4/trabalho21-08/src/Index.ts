@@ -2,8 +2,7 @@
 import * as readline from 'readline-sync';
 import { Doador } from './Doador';
 import { SistemaHemocentro } from './SistemaHemocentro';
-const doador:SistemaHemocentro = new SistemaHemocentro("",1,1) 
-doador.primeiroDoador()// Chama a função dentro da classe "SistemaHemocentro"
+const doador:SistemaHemocentro = new SistemaHemocentro() 
 let opcao = ""
 // Loop que vai ser executado até a opção for diferente de "5"
 do{

@@ -97,3 +97,46 @@ let identidade = true
 let maioridade = 35
 let responsavel = false
 console.log("A pessoa pode comprar um bilhete?" + (identidade && maioridade >=35 || responsavel))
+
+
+
+let pilha = [10, 20, 30, 40, 50]
+
+function removerTodosExcetoUm(pilha){
+    if (pilha.length <= 1) {
+        return pilha
+    }
+    let ultimoElemento
+    while(pilha.length > 1){
+        ultimoElemento = pilha.pop()
+    }
+    ultimoElemento = pilha.pop()
+    
+    pilha.push(ultimoElemento)
+    return pilha
+}
+
+let pilhaFinal = removerTodosExcetoUm(pilha)
+console.log("Pilha final:", pilhaFinal)
+
+
+
+const valores = [1, 2, 3, 4, 5, 6, 20]
+
+function f(x){
+    return x+1;
+}
+
+function h(x){
+    return x*x;
+}
+
+const resultadosF = valores.map(f)
+const resultadosH = valores.map(x => h(x))
+
+console.log("Resultados de f(x):", resultadosF)
+console.log("Resultados de h(x^2):", resultadosH)
+
+
+
+

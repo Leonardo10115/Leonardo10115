@@ -33,11 +33,12 @@ var __importStar = (this && this.__importStar) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
+//Importação das classes
 const readline = __importStar(require("readline-sync"));
 const SistemaHemocentro_1 = require("./SistemaHemocentro");
-const doador = new SistemaHemocentro_1.SistemaHemocentro("", 1, 1);
-doador.primeiroDoador();
+const doador = new SistemaHemocentro_1.SistemaHemocentro();
 let opcao = "";
+// Loop que vai ser executado até a opção for diferente de "5"
 do {
     console.log(`
     ===== SISTEMA DE CADASTRO DE DOADORES DE SANGUE =====
@@ -48,7 +49,10 @@ do {
 5. Sair
 
     `);
+    // Pergunta ao usuario qual função ele quer executar
     opcao = readline.question("Escolha uma opção: ");
+    // Switch para cada opção disponivel
+    // Dentro de cada caso do Switch chama uma função que esta dentro da classe "SistemaHemocentro"
     switch (opcao) {
         case "1":
             doador.cadastrarDoador();
